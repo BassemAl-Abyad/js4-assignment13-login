@@ -127,27 +127,23 @@ function login() {
   var password = signinPassword.value;
   var email = signinEmail.value;
 
-// Check for valid email format
+  // Check for valid email format
   if (!isValidEmail(email)) {
     document.getElementById("incorrect").innerHTML =
       '<span class="text-danger m-3">Please enter a valid email address.</span>';
     return false;
   }
 
-// send the user to home page if email and password match
+  // send the user to home page if email and password match
   var found = false;
   for (var i = 0; i < signUpArray.length; i++) {
     if (
       signUpArray[i].email.toLowerCase() == email.toLowerCase() &&
-      signUpArray[i].password.toLowerCase() == password.toLowerCase()
+      signUpArray[i].password == password
     ) {
       localStorage.setItem("sessionUsername", signUpArray[i].name);
       localStorage.setItem("sessionEmail", signUpArray[i].email);
-      if (baseURL == "/") {
-        location.replace(`https://${location.hostname}/home.html`);
-      } else {
-        location.replace(`${baseURL}/home.html`);
-      }
+      location.replace(`${baseURL}/home.html`);
       found = true;
       break;
     }
