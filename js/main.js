@@ -143,7 +143,7 @@ function login() {
     ) {
       localStorage.setItem("sessionUsername", signUpArray[i].name);
       localStorage.setItem("sessionEmail", signUpArray[i].email);
-      location.replace(`${baseURL}/home.html`);
+      location.replace("home.html");
       found = true;
       break;
     }
@@ -158,5 +158,5 @@ function login() {
 function logout() {
   localStorage.removeItem("sessionUsername");
   localStorage.removeItem("sessionEmail");
-  location.replace(`${baseURL}/index.html`);
+  location.replace("index.html");
 }
