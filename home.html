@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- fontawesome css -->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <!-- bootstrap css -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- main css -->
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- media query css -->
+    <link rel="stylesheet" href="./css/media-query.css" />
+    <!-- browser icon -->
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <!-- title -->
+    <title>Login by Bassem Al-Abyad</title>
+  </head>
+  <body>
+    <main>
+      <nav class="navbar navbar-expand-lg navbar-dark group">
+        <div class="container">
+          <a class="navbar-brand" href="#">SMART LOGIN</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto w-100 d-flex justify-content-end">
+              <li class="nav-item">
+                <button
+                  class="btn btn-outline-warning"
+                  type="button"
+                  onclick="logout();"
+                >Logout</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container my-5 text-center h-100 d-flex align-items-center">
+        <div class="group m-auto w-75 p-5">
+          <h1 id="username">
+            <!-- welcome message -->
+          </h1>
+          <h3 id="email">
+            <!-- user email will be displayed here -->
+          </h3>
+        </div>
+      </div>
+    </main>
+    <!-- JS FILES -->
+    <!-- bootstrap js -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- main js -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

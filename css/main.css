@@ -1,0 +1,24 @@
+
+:root {
+  --main-color: #24353F;
+}
+
+body {
+  background-color: #24353F;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+h1,h3 {
+  color: #17A2B8;
+}
+
+.group {
+    box-shadow: -5px 2px 54px -9px rgba(0, 0, 0, 1);
+}
+
+p a {
+  text-decoration: none;
+}
+p a:hover {
+  text-decoration: underline;
+}
