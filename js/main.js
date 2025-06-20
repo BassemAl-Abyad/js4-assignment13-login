@@ -5,7 +5,7 @@ var signupPassword = document.getElementById("signupPassword");
 var signinEmail = document.getElementById("signinEmail");
 var signinPassword = document.getElementById("signinPassword");
 // url detection
-var baseURL = location.origin;
+var baseURL = location.pathname;
 
 // welcome message and email display
 var username = localStorage.getItem("sessionUsername");
