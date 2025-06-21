@@ -9,8 +9,24 @@ var signinPassword = document.getElementById("signinPassword");
 var username = localStorage.getItem("sessionUsername");
 var email = localStorage.getItem("sessionEmail");
 if (username) {
-  document.getElementById("username").innerHTML = `Welcome ${username}!`;
-  document.getElementById("email").innerHTML = `Email: ${email}`;
+  var usernameElem = document.getElementById("username");
+  var emailElem = document.getElementById("email");
+  if (usernameElem) {
+    usernameElem.innerHTML = `Welcome ${username}!`;
+  }
+  if (emailElem) {
+    emailElem.innerHTML = `Email: ${email}`;
+  }
+}
+
+// Redirect to home page if user is logged in
+if (
+  location.pathname.endsWith("index.html") ||
+  location.pathname === "/"
+) {
+  if (username && email) {
+    location.replace("home.html");
+  }
 }
 
 // check if user is logged in
