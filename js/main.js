@@ -91,7 +91,10 @@ function signUp() {
     signUpArray.push(signUp);
     localStorage.setItem("users", JSON.stringify(signUpArray));
     document.getElementById("exist").innerHTML =
-      '<span class="text-success m-3">Account created!</span>';
+      '<span class="text-success m-3">Account created! Redirecting to login page in 2 seconds...</span>';
+    setTimeout(function () {
+      location.replace("index.html");
+    }, 3000);
     return true;
   }
   if (isEmailExist() == false) {
@@ -101,7 +104,10 @@ function signUp() {
     signUpArray.push(signUp);
     localStorage.setItem("users", JSON.stringify(signUpArray));
     document.getElementById("exist").innerHTML =
-      '<span class="text-success m-3">Account created!</span>';
+      '<span class="text-success m-3">Account created! Redirecting to login page in 3 seconds...</span>';
+    setTimeout(function () {
+      location.replace("index.html");
+    }, 3000);
   }
 }
 
