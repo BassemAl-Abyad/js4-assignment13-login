@@ -91,7 +91,7 @@ function signUp() {
     signUpArray.push(signUp);
     localStorage.setItem("users", JSON.stringify(signUpArray));
     document.getElementById("exist").innerHTML =
-      '<span class="text-success m-3">Success!</span>';
+      '<span class="text-success m-3">Account created!</span>';
     return true;
   }
   if (isEmailExist() == false) {
@@ -101,7 +101,7 @@ function signUp() {
     signUpArray.push(signUp);
     localStorage.setItem("users", JSON.stringify(signUpArray));
     document.getElementById("exist").innerHTML =
-      '<span class="text-success m-3">Success!</span>';
+      '<span class="text-success m-3">Account created!</span>';
   }
 }
 
