@@ -10,7 +10,7 @@ var username = localStorage.getItem("sessionUsername");
 var email = localStorage.getItem("sessionEmail");
 if (username) {
   document.getElementById("username").innerHTML = `Welcome ${username}!`;
-  document.getElementById("email").innerHTML = `Email: ${email}.`;
+  document.getElementById("email").innerHTML = `Email: ${email}`;
 }
 
 // check if user is logged in
@@ -21,7 +21,6 @@ if (localStorage.getItem("users") == null) {
   signUpArray = JSON.parse(localStorage.getItem("users"));
 }
 
-// email validation for sign
 // Only run email validation on signup and index pages
 if (
   location.pathname.endsWith("signup.html") ||
@@ -124,15 +123,11 @@ function login() {
   }
   var password = signinPassword.value;
   var email = signinEmail.value;
-
-  // Check for valid email format
   if (!isValidEmail(email)) {
     document.getElementById("incorrect").innerHTML =
       '<span class="text-danger m-3">Please enter a valid email address.</span>';
     return false;
   }
-
-  // send the user to home page if email and password match
   var found = false;
   for (var i = 0; i < signUpArray.length; i++) {
     if (

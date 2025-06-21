@@ -21,33 +21,39 @@
       <div class="container my-5 text-center">
         <div class="group m-auto w-75 p-5">
           <h1>Smart Login System</h1>
-
-          <input
-            id="signupName"
-            class="form-control my-3"
-            placeholder="Name"
-            type="text"
-          />
-          <input
-            id="signupEmail"
-            class="form-control my-3"
-            placeholder="Email (ex@example.com)"
-            type="email"
-          />
-
-          <input
-            id="signupPassword"
-            class="form-control my-3"
-            placeholder="Password"
-            type="password"
-          />
-          <p id="exist"></p>
-
-          <button onclick=" signUp()" class="btn btn-outline-info w-100 my-3">
-            Sign Up
-          </button>
+          <form onsubmit="signUp(); return false;">
+            <input
+              id="signupName"
+              class="form-control my-3"
+              placeholder="Name"
+              type="text"
+              required
+              autocomplete="name"
+            />
+            <input
+              id="signupEmail"
+              class="form-control my-3"
+              placeholder="Email (ex@example.com)"
+              type="email"
+              required
+              autocomplete="email"
+            />
+            <input
+              id="signupPassword"
+              class="form-control my-3"
+              placeholder="Password"
+              type="password"
+              required
+              autocomplete="new-password"
+            />
+            <p id="exist"></p>
+            <button type="submit" class="btn btn-outline-info w-100 my-3">
+              Sign Up
+            </button>
+          </form>
           <p class="text-white">
-            You have an account? <a class="text-white" href="index.html">Sign In</a>
+            You have an account?
+            <a class="text-white" href="index.html">Sign In</a>
           </p>
         </div>
       </div>
